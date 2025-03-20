@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmara Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+        got the below lne from stackoverflow: https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file 
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <img class="logo" src="assets/AsmaraRestaurantLogo.png" alt="Asmara Restaurant in Big Yellow Letters">
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="navbar-links" id="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="section">Menu</h1>
+        <div class="category-buttons">
+            <button class="active">Chicken</button>
+            <button>Beef</button>
+            <button>Lamb</button>
+            <button>Vegetarian</button>
+            <button>Appetizers</button>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Tsebhi Derho/Spicy Chicken</h2>
+                <span>Tender chicken curried in red pepper sauce with a hard-boiled egg</span>
+                <p class="price">$22.95</p>
+            </div>
+            <div class="menu-item">
+                <h2>Alitcha Derho/Mild Chicken</h2>
+                <span>Tender chicken curried in mild pepper sauce with a hard-boiled egg</span>
+                <p class="price">$20.95</p>
+            </div>
+            <div class="menu-item">
+                <h2 class="item-name">Chicken Tibsi</h2>
+                <span class="description">Chicken sautéed in green peppers, onions, tomatoes, and hot spices</span>
+                <p class="price">$20.95</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Asmara Restaurant</p>
+        <p>51 Oak St. Portland, ME 04101</p>
+        <p>207-317-7293</p>
+    </footer>
+</body>
