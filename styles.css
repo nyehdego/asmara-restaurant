@@ -13,6 +13,19 @@ header {
     align-items: center;
 }
 
+.menu-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-details h4 {
+    margin: 0px;
+    text-align: center;
+    max-width: 900px;
+}
+
 .section {
     display: flex;
     justify-content: center;
