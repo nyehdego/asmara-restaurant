@@ -7,10 +7,12 @@ body {
 }
 
 header {
-    padding: 15px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:#448D59;
+    color: #FFF491;
 }
 
 .menu-details {
@@ -26,19 +28,33 @@ header {
     max-width: 900px;
 }
 
+.side-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .section {
     display: flex;
     justify-content: center;
 }
 
+.logo-setup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    margin: 15px;
+}
+
 .logo {
     width: 400px;
-
 }
 
 nav {
     display: flex;
     align-items: center;
+    margin: 15px;
 }
 
 #menu-toggle {
@@ -53,14 +69,21 @@ nav {
     list-style: none;
     display: flex;
     gap: 50px;
+    
 }
 
 .navbar-links a {
     text-decoration: none;
-    color: #448D59;
+    color: #FFF491;
     font-size: 20px;
     display: block;
 }
+
+.nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    color: #ffd700;
+  }
 
 .category-buttons {
     display: flex;
@@ -101,7 +124,8 @@ nav {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 10px;
-    width: 80%
+    width: 80%;
+    border-bottom: 1px solid rgba(68, 141, 89, 0.2)
 }
 
 .menu-item h2 {

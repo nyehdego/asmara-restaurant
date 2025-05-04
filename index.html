@@ -12,15 +12,19 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="assets/AsmaraRestaurantLogo.png" alt="Asmara Restaurant in Big Yellow Letters">
+        <div class="logo-setup">
+        <h1>Asmara</h1>
+        <span>An Eritrean Restaurant</span>
+        </div>
+        <!-- <img class="logo" src="assets/AsmaraRestaurantLogo.png" alt="Asmara Restaurant in Big Yellow Letters"> -->
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul class="navbar-links" id="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Menu</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -28,9 +32,11 @@
         <h1 class="section">Menu</h1>
         <div class="menu-details">
             <h4>Entrees are served on either a plate of injera or rice, with salad & your choice one side:</h4>
-            <h4>(1) Red lentil stew in a red pepper sauce</h4>
-            <h4>(2) Collard greens & kale served in a mild sauce</h4>
-            <h4>(3) Cabbage, carrots, & potatoes in a mild yellow sauce.</h4>
+            <div class="side-options">
+                <h4>(1) Red lentil stew in a red pepper sauce</h4>
+                <h4>(2) Collard greens & kale served in a mild sauce</h4>
+                <h4>(3) Cabbage, carrots, & potatoes in a mild yellow sauce.</h4>
+            </div>
             
             <h5>Please note, and extra serving of injera is $4.00</h5>
         </div>
@@ -38,7 +44,7 @@
             <button class="menu_category" data-filter="chicken-item">Chicken</button>
             <button class="menu_category" data-filter="beef-item">Beef</button>
             <button class="menu_category"data-filter="lamb-item">Lamb</button>
-            <button class="menu_category"data-filter="vegetarian-item">Vegetarian</button>
+            <button class="menu_category"data-filter="veg-item">Vegetarian</button>
             <button class="menu_category"data-filter="app-item">Appetizers</button>
             <button class="menu_category"data-filter="drink-item">Drinks</button>
         </div>
@@ -123,10 +129,50 @@
                 <span class="description">Sautéed lamb and spinach cooked with onions and berbere</span>
                 <p class="price">$22.95</p>
             </div>
-            <div class="menu-item" data-category="app-item">
-                <h2 class="item-name">Salata Fit Fit</h2>
-                <span class="description">Chopped tomatoes, onions and green chilies seasoned in house dressing and soaked with pieces of injera</span>
-                <p class="price">$8.95</p>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Alitcha</h2>
+                <span class="description">Cabbage, carrots, and potatoes stewed in a mild yellow sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Tsebhi Hamli/Stewed Greens</h2>
+                <span class="description">Collard greens and kale curried in a mild sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Birsen/Stewed Lentils</h2>
+                <span class="description">Red lentils curried in a medium spicy sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Fou'l</h2>
+                <span class="description">Fava beans & chopped tomatoes, hot peppers, onions, & olive</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Shiro</h2>
+                <span class="description">Roasted, ground chickpeas & red pepper cooked with fresh garlic & earthy spices</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Sauteed Spinach</h2>
+                <span class="description">Sauteed spinach cooked with potatoes and onions in a hot spicy sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Spicy Okra and Potatoes</h2>
+                <span class="description">Sauteed okra cooked with potatoes and onions in a hot spicy sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Spicy Potatoes</h2>
+                <span class="description">Sauteed potatoes and onions in a hot spicy sauce</span>
+                <p class="price">$19.95</p>
+            </div>
+            <div class="menu-item" data-category="veg-item">
+                <h2 class="item-name">Vegetarian Sampler</h2>
+                <span class="description">Heartly portions of all vegetarian dishes (Serves 3-4)</span>
+                <p class="price">$19.95</p>
             </div>
             <div class="menu-item" data-category="app-item">
                 <h2 class="item-name">Beef Sambusa</h2>
@@ -155,11 +201,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>Asmara Restaurant</p>
-        <p>51 Oak St. Portland, ME 04101</p>
-        <p>207-317-7293</p>
-    </footer>
     <script>
         const categoryButtons = document.querySelectorAll('.menu_category');
         const menuItems = document.querySelectorAll('.menu-item');
@@ -181,3 +222,9 @@
         });
     </script>
 </body>
+<footer>
+    <p>Asmara Restaurant</p>
+    <p>51 Oak St. Portland, ME 04101</p>
+    <p>207-317-7293</p>
+</footer>
+</html>
